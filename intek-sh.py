@@ -3,7 +3,7 @@
 """This program is called The Mini-shell, that simulates the Bash Shell."""
 
 from Builtin import (execute_program, change_dir, exit_intek_shell,
-                     print_env, export, unset)
+                     print_env, export, unset, alias)
 
 
 def run_command(command, arguments):
@@ -21,7 +21,8 @@ def run_command(command, arguments):
         'exit': exit_intek_shell,
         'printenv': print_env,
         'export': export,
-        'unset': unset
+        'unset': unset,
+        'alias': alias
     }
     try:
         func = switcher.get(command)
@@ -32,7 +33,7 @@ def run_command(command, arguments):
 
 def main():
     """
-    This is the core of the program, get in put and execute.
+    This is the core of the program, get input and execute.
     """
     while True:
         try:
