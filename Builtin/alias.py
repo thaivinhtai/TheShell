@@ -1,7 +1,7 @@
 """This module define or display aliases."""
 
 
-def execute_alias(**kwargs):
+def execute_alias(existed, **kwargs):
     """
     execute_alias(key=value, [key=value, ...])
 
@@ -14,6 +14,8 @@ def execute_alias(**kwargs):
 
     Optional argument:
         :param kwargs:     key='value'
+    Require argument:
+
     :return: list of aliases
     """
     aliases = {

@@ -1,9 +1,28 @@
 #!/usr/bin/env python3
 
-"""This program is called The Mini-shell, that simulates the Bash Shell."""
+"""This program is called The Shell, that simulates the Bash Shell."""
 
 from Builtin import (execute_program, change_dir, exit_intek_shell,
                      print_env, export, unset, alias)
+from Features import expan_globbing_pattern
+
+
+def handle_input(orchestra):
+    """
+    handle_input(orchestra) ->  command, arguments.
+
+    This function divide user's input into command, arguments.
+
+    Required argument:
+        orchestra   --  input of user.
+    """
+    orchestra = orchestra.split(" ")
+    while "" in orchestra:
+        orchestra.remove("")
+    orchestra = expan_globbing_pattern(orchestra)
+    command = orchestra[0]
+    arguments = orchestra[1:]
+    return command, arguments
 
 
 def run_command(command, arguments):
@@ -40,16 +59,15 @@ def main():
             orchestra = input("intek-sh$ ")
             if orchestra == "":
                 continue
-            orchestra = orchestra.split(" ")
-            while "" in orchestra:
-                orchestra.remove("")
-            command = orchestra[0]
-            arguments = orchestra[1:]
+            command, arguments = handle_input(orchestra)
             result, status = run_command(command, arguments)
             if result == "exit":
                 return status
         except EOFError:
             return 1
+        except KeyboardInterrupt:
+            print("")
+            continue
 
 
 if __name__ == "__main__":
