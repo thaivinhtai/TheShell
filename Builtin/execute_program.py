@@ -1,7 +1,7 @@
 """This modules will run a program that the user type in."""
 
 from subprocess import run
-from .Stuffs import get_path_environ, get_file_type, get_full_path
+from Stuffs import get_path_environ, get_file_type, get_full_path
 
 
 def execute_program(name_of_program, arguments):

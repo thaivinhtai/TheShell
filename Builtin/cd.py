@@ -1,7 +1,7 @@
 """This module provides the ability to change the working directory."""
 
 from os import chdir
-from .Stuffs import get_file_type, get_full_path
+from Stuffs import get_file_type, get_full_path
 
 
 def change_dir(directory):
