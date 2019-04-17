@@ -3,9 +3,9 @@
 """This program is called The Shell, that simulates the Bash Shell."""
 
 from Builtin import (execute_program, change_dir, exit_intek_shell,
-                     print_env, export, unset, execute_alias, GlobalAliases)
+                     print_env, export, unset, execute_alias)
 from Features import expan_globbing_pattern
-from Stuffs import get_input_display
+from Stuffs import get_input_display, GlobalAliases
 
 
 def handle_input(orchestra):
