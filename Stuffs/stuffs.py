@@ -5,9 +5,10 @@ Functions in this module:
  - get_full_path(file) -> return full path of file.
  - get_file_type(file) -> return type of file.
  - get_path_environ()  -> get the value of $PATH in Operating System as list.
+ - get_input_display() -> display of current working directory of the shell.
 """
 
-from os import path, environ
+from os import path, environ, getcwd
 
 
 def get_full_path(file):
@@ -54,3 +55,14 @@ def get_path_environ():
     This Function splits all the value in the $PATH and return a list of path.
     """
     return environ['PATH'].split(":")
+
+
+def get_input_display():
+    """
+    This funtion return the display of current working directory of the shell.
+    """
+    current_dir = getcwd()
+    home_dir = get_full_path("~")
+    current_dir = current_dir.replace(home_dir, "~")
+    return ("\033[92m\033[1m" + "intek-sh" + "\033[0m" +
+            ":" + "\033[94m\033[1m" + current_dir + "\033[0m$ ")
