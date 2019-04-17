@@ -5,7 +5,7 @@
 from Builtin import (execute_program, change_dir, exit_intek_shell,
                      print_env, export, unset, execute_alias)
 from Features import expan_globbing_pattern
-from Stuffs import get_input_display, GlobalAliases
+from Stuffs import get_input_display, GlobalAliases, Vars
 
 
 def handle_input(orchestra):
@@ -72,9 +72,9 @@ def main():
             if orchestra == "":
                 continue
             command, arguments = handle_input(orchestra)
-            result, status = run_command(command, arguments)
+            result, Vars.variations['?'] = run_command(command, arguments)
             if result == "exit":
-                return status
+                return Vars.variations['?']
         except EOFError:
             return 1
         except KeyboardInterrupt:

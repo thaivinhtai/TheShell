@@ -9,6 +9,7 @@ Functions in this module:
 """
 
 from os import path, environ, getcwd
+from io import RawIOBase, BufferedIOBase
 
 
 def get_full_path(file):
@@ -39,6 +40,8 @@ def get_file_type(file):
     """
     try:
         file = get_full_path(file)
+        if isinstance(file, (RawIOBase, BufferedIOBase)):
+            return "bin"
         if path.isfile(file):
             return "file"
         if path.isdir(file):

@@ -1,10 +1,12 @@
 """This module provides resources of variations for all program."""
 
 
-class Var():
+class Vars():
     """This class stores vars for the The Shell.
     """
-    variations = {}
+    variations = {
+        "?": None
+    }
 
 
 class GlobalAliases():
