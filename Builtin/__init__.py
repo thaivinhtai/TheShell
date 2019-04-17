@@ -6,4 +6,4 @@ from .exit import exit_intek_shell
 from .printenv import print_env
 from .export import export
 from .unset import unset
-from .alias import execute_alias
+from .alias import execute_alias, GlobalAliases

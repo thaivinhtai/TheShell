@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff8faa97-a5ce-4f61-8409-4869de2e6575" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Features/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Builtin/Stuffs/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Builtin/Stuffs/stuffs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Builtin/cd.py" beforeDir="false" afterPath="$PROJECT_DIR$/Builtin/cd.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builtin/execute_program.py" beforeDir="false" afterPath="$PROJECT_DIR$/Builtin/execute_program.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stuffs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stuffs/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stuffs/global_resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stuffs/global_resources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stuffs/stuffs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stuffs/stuffs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intek-sh.py" beforeDir="false" afterPath="$PROJECT_DIR$/intek-sh.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,13 +17,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Features/file_globbing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="315">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/intek-sh.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
               <folding>
-                <element signature="e#214#236#0" expanded="true" />
+                <element signature="e#96#225#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Stuffs/global_resources.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Builtin/execute_program.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+              <folding>
+                <element signature="e#62#99#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Stuffs/stuffs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+              <folding>
+                <element signature="e#382#418#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Stuffs/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#76#184#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,19 +93,22 @@
       <list>
         <option value="$PROJECT_DIR$/Builtin/__init__.py" />
         <option value="$PROJECT_DIR$/Builtin/alias.py" />
-        <option value="$PROJECT_DIR$/intek-sh.py" />
         <option value="$PROJECT_DIR$/Features/files_globbing.py" />
         <option value="$PROJECT_DIR$/Builtin/cd.py" />
-        <option value="$PROJECT_DIR$/Builtin/execute_program.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/Features/__init__.py" />
         <option value="$PROJECT_DIR$/Features/file_globbing.py" />
+        <option value="$PROJECT_DIR$/Stuffs/__init__.py" />
+        <option value="$PROJECT_DIR$/Stuffs/global_resources.py" />
+        <option value="$PROJECT_DIR$/Stuffs/stuffs.py" />
+        <option value="$PROJECT_DIR$/Builtin/execute_program.py" />
+        <option value="$PROJECT_DIR$/intek-sh.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="271" />
-    <option name="y" value="201" />
+    <option name="x" value="451" />
+    <option name="y" value="285" />
     <option name="width" value="1440" />
     <option name="height" value="774" />
   </component>
@@ -62,6 +118,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -79,16 +136,20 @@
               <item name="TheShell" type="462c0819:PsiDirectoryNode" />
               <item name="Features" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TheShell" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TheShell" type="462c0819:PsiDirectoryNode" />
+              <item name="Stuffs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -122,10 +183,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="271" y="201" width="1440" height="774" extended-state="0" />
+    <frame x="451" y="285" width="1440" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27110156" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -185,32 +246,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intek-sh.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Builtin/exit.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Stuffs/stuffs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Builtin/execute_program.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="6" column="48" lean-forward="true" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-          <folding>
-            <element signature="e#62#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Builtin/unset.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -227,10 +264,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Features/file_globbing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="315">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stuffs/global_resources.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stuffs/stuffs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
           <folding>
-            <element signature="e#214#236#0" expanded="true" />
+            <element signature="e#382#418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Builtin/execute_program.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="e#62#99#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stuffs/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#76#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intek-sh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
+          <folding>
+            <element signature="e#96#225#0" expanded="true" />
           </folding>
         </state>
       </provider>
