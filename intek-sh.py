@@ -4,37 +4,8 @@
 
 from Builtin import (execute_program, change_dir, exit_intek_shell,
                      print_env, export, unset, execute_alias)
-from Features import expan_globbing_pattern
 from Stuffs import get_input_display, GlobalAliases, Vars
-
-
-def handle_input(orchestra):
-    """
-    handle_input(orchestra) ->  command, arguments.
-
-    This function divide user's input into command, arguments.
-
-    Required argument:
-        orchestra   --  input of user.
-    """
-    orchestra = orchestra.split(" ")
-    while "" in orchestra:
-        orchestra.remove("")
-    # check file globbing
-    orchestra = expan_globbing_pattern(orchestra)
-    command = orchestra[0]
-    arguments = orchestra[1:]
-    # check command alias
-    temp_command = []
-    if command in GlobalAliases.aliases.keys():
-        temp_command = GlobalAliases.aliases[command].split(" ")
-    if temp_command:
-        command = temp_command[0]
-        temp_command.remove(command)
-        for element in temp_command[1::-1]:
-            arguments.insert(0, element)
-    # return values
-    return command, arguments
+from processing_input import handle_input
 
 
 def run_command(command, arguments):
