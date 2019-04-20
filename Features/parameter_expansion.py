@@ -5,8 +5,7 @@ expanded from characters immediately following it which could be interpreted as
 part of the name.
 """
 
-from string import ascii_lowercase, ascii_uppercase
-from Stuffs import Vars
+from Stuffs import CharAndNumber, Vars
 
 
 def handle_process_id(orchestra):
@@ -21,7 +20,7 @@ def handle_process_id(orchestra):
     element_index = -1
     for element in orchestra:
         element_index += 1
-        while "$$" in element:
+        while "$$" in orchestra[element_index]:
             orchestra[element_index] =\
                 orchestra[element_index].replace("$$", Vars.get_var("$"))
     return orchestra
@@ -37,7 +36,7 @@ def expan_all(orchestra):
         orchestra   --  user's input.
     """
 
-    char_and_numb = list(ascii_lowercase + ascii_uppercase + '0123456789')
+    char_and_numb = CharAndNumber.char_and_number
     element_index = -1
 
     def get_begin_and_end_replace_position(element):
@@ -58,8 +57,6 @@ def expan_all(orchestra):
                 last_index.append(temp_index)
         temp = []
         for element in last_index:
-            print(element, "l")
-            print(begin_index[0], "b")
             if element <= begin_index[0]:
                 temp.append(element)
         for element in temp:

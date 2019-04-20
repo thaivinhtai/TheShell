@@ -1,17 +1,15 @@
 """This module provides resources of variations for all program."""
 
+from string import ascii_lowercase, ascii_uppercase
 from os import getpid
 
 
 class Vars():
     """This class stores vars for the The Shell.
     """
-    process_id = getpid()
-    process_id = str(process_id)
-
     variations = {
         "?": "0",
-        "$": process_id,
+        "$": str(getpid()),
         "a": "hello"
     }
 
@@ -42,3 +40,8 @@ class GlobalAliases():
         'll': 'ls alF',
         'ls': 'ls --color=auto'
     }
+
+
+class CharAndNumber():
+    """Just char and number."""
+    char_and_number = list(ascii_lowercase + ascii_uppercase + '0123456789')
