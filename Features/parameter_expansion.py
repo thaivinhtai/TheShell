@@ -56,7 +56,16 @@ def expan_all(orchestra):
                 begin_index.append(temp_index)
             if char not in char_and_numb:
                 last_index.append(temp_index)
-        last_index.remove(0)
+        temp = []
+        for element in last_index:
+            print(element, "l")
+            print(begin_index[0], "b")
+            if element <= begin_index[0]:
+                temp.append(element)
+        for element in temp:
+            last_index.remove(element)
+        while len(last_index) > len(begin_index):
+            last_index.remove(last_index[-1])
         return begin_index, last_index
 
     def get_replace_list(element, begin_index, last_index):
@@ -107,11 +116,15 @@ def expan_all(orchestra):
         nonlocal element_index
         nonlocal char_and_numb
         element_index += 1
-        if "$" in element:
+        if "$" in element and (element[0] != "'" or element[-1] != "'"):
             begin_index, last_index =\
                 get_begin_and_end_replace_position(element)
             replace_list = get_replace_list(element, begin_index, last_index)
             execute_replace(replace_list, element_index, orchestra)
+        if "$" in element and element[0] == "'" and element[-1] == "'":
+            orchestra[element_index] =\
+                orchestra[element_index].\
+                replace(orchestra[element_index][0], "")
 
     for element in orchestra:
         handle_one_by_one(element, orchestra)

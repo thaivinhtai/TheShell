@@ -13,6 +13,17 @@ def handle_input(orchestra):
     Required argument:
         orchestra   --  input of user.
     """
+    # open_apostrophe = False
+    # mark = ""
+    # for char in orchestra:
+    #     if char == "'":
+    #         open_apostrophe == True
+    #         mark = "'"
+    # while count_apostrophe % 2 != 0:
+    #     wait_apostrophe = input("> ")
+    #     if wait_apostrophe == "'":
+    #         break
+    #
     orchestra = orchestra.split(" ")
     while "" in orchestra:
         orchestra.remove("")
