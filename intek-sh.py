@@ -43,6 +43,8 @@ def main():
             if orchestra == "":
                 continue
             command, arguments = handle_input(orchestra)
+            if command == "":
+                continue
             result, Vars.variations['?'] = run_command(command, arguments)
             if result == "exit":
                 return Vars.variations['?']

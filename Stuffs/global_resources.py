@@ -1,12 +1,33 @@
 """This module provides resources of variations for all program."""
 
+from os import getpid
+
 
 class Vars():
     """This class stores vars for the The Shell.
     """
+    process_id = getpid()
+    process_id = str(process_id)
+
     variations = {
-        "?": None
+        "?": "0",
+        "$": process_id,
+        "a": "hello"
     }
+
+    def get_var(key):
+        """
+        get_var(key)    ->  value.
+
+        This module retrives value of variations.
+
+        Required argument:
+            key --  the key of value.
+        """
+        try:
+            return str(Vars.variations[key])
+        except KeyError:
+            return ""
 
 
 class GlobalAliases():

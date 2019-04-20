@@ -17,7 +17,7 @@ def handle_input(orchestra):
     while "" in orchestra:
         orchestra.remove("")
     # check file globbing
-    expan_parameter(orchestra)
+    orchestra = expan_parameter(orchestra)
     orchestra = expan_globbing_pattern(orchestra)
     command = orchestra[0]
     arguments = orchestra[1:]
