@@ -2,9 +2,11 @@
 
 """This program is called The Shell, that simulates the Bash Shell."""
 
+import readline
+
 from Builtin import (execute_program, change_dir, exit_intek_shell,
                      print_env, export, unset, execute_alias)
-from Stuffs import get_input_display, GlobalAliases, Vars
+from Stuffs import get_input_display, Vars
 from processing_input import handle_input
 
 
@@ -39,10 +41,15 @@ def main():
     """
     while True:
         try:
+            readline.set_startup_hook()
             orchestra = input(get_input_display())
             if orchestra == "":
                 continue
             command, arguments = handle_input(orchestra)
+            try:
+                Vars.variations["_"] = arguments[-1]
+            except IndexError:
+                pass
             if command == "":
                 continue
             result, Vars.variations['?'] = run_command(command, arguments)
@@ -51,7 +58,7 @@ def main():
         except EOFError:
             return 1
         except KeyboardInterrupt:
-            print("")
+            print("^C")
             continue
 
 

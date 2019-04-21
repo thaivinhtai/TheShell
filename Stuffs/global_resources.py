@@ -10,7 +10,8 @@ class Vars():
     variations = {
         "?": "0",
         "$": str(getpid()),
-        "a": "hello"
+        "a": "hello",
+        "_": ""
     }
 
     def get_var(key):

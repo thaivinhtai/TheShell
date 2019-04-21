@@ -8,21 +8,33 @@ part of the name.
 from Stuffs import CharAndNumber, Vars
 
 
-def handle_process_id(orchestra):
+def handle_special_vars(orchestra):
     """
-    handel_process_id(orchestra) -> expand "$$".
+    handle_special_vars(orchestra) -> expand spacial vars.
 
-    This function expand all "$$" in input.
+    This function expand all spacial vars in input.
 
     Reqired argument:
         orchestra   -- user's input
     """
+
+    def replace_var():
+        """
+        replace_var()   -> replace var.
+        """
+        nonlocal orchestra
+        nonlocal element_index
+        nonlocal var
+        while var in orchestra[element_index]:
+            orchestra[element_index] =\
+                orchestra[element_index].replace(var, Vars.get_var(var[1]))
+
+    special_vars = ["$$", "$?", "$_"]
     element_index = -1
     for element in orchestra:
         element_index += 1
-        while "$$" in orchestra[element_index]:
-            orchestra[element_index] =\
-                orchestra[element_index].replace("$$", Vars.get_var("$"))
+        for var in special_vars:
+            replace_var()
     return orchestra
 
 
@@ -137,6 +149,6 @@ def expan_parameter(orchestra):
     Required argument:
         orchestra   --  user's input
     """
-    orchestra = handle_process_id(orchestra)
+    orchestra = handle_special_vars(orchestra)
     orchestra = expan_all(orchestra)
     return orchestra

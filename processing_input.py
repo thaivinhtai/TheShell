@@ -23,7 +23,7 @@ def handle_input(orchestra):
     #     wait_apostrophe = input("> ")
     #     if wait_apostrophe == "'":
     #         break
-    #
+
     orchestra = orchestra.split(" ")
     while "" in orchestra:
         orchestra.remove("")
