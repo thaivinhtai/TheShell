@@ -16,9 +16,9 @@ def handle_input(orchestra):
     orchestra = orchestra.split(" ")
     while "" in orchestra:
         orchestra.remove("")
-    orchestra = expan_tilde(orchestra)
     orchestra = expan_parameter(orchestra)
     orchestra = expan_globbing_pattern(orchestra)
+    orchestra = expan_tilde(orchestra)
     command = orchestra[0]
     arguments = orchestra[1:]
     # check command alias
