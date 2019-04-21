@@ -36,24 +36,14 @@ def assign_paramenter(orchestra):
         if "'" not in element and '"' not in element:
             Vars.variations[element[:position]] = element[position + 1:]
             return element
-        element = element[position + 1:].replace("'", "")
-        parse = element[position + 1:].replace('"', "")
+        temp_element = element[position:].replace("'", "")
+        parse = temp_element[position:].replace('"', "")
         Vars.variations[element[:position]] = parse
         return element
 
     temp = []
     for element in orchestra:
         if "=" in element:
-            # position = element.index("=")
-            # if "'" in element or '"' in elemnt[:position]:
-            #     continue
-            # temp.append(element)
-            # if "'" not in element and '"' not in elemnt:
-            #     Vars.variations[element[:position]] = element[position + 1:]
-            #     continue
-            # element = element[position + 1:].replace("'", "")
-            # parse = element[position + 1:].replace('"', "")
-            # Vars.variations[element[:position]] = parse
             assign(element)
     for element in temp:
         orchestra.remove(element)

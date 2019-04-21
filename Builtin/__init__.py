@@ -7,3 +7,4 @@ from .printenv import print_env
 from .export import export
 from .unset import unset
 from .alias import execute_alias, GlobalAliases
+from .history import print_history

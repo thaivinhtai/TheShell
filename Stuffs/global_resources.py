@@ -1,7 +1,9 @@
 """This module provides resources of variations for all program."""
 
+import sys
 from string import ascii_lowercase, ascii_uppercase
-from os import getpid, environ
+from os import getpid, environ, path
+from Stuffs import read_file
 
 
 class Vars():
@@ -47,3 +49,10 @@ class GlobalAliases():
 class CharAndNumber():
     """Just char and number."""
     char_and_number = list(ascii_lowercase + ascii_uppercase + '0123456789')
+
+
+class History():
+    """Call and store history."""
+    path_dir = path.dirname(sys.argv[0])
+    history_local = path_dir + "/Stuffs/Data/history"
+    history_conten = read_file(history_local).split("\n")
