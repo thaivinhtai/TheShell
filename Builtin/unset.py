@@ -1,7 +1,7 @@
 """This module unsets values and attributes of shell variables and functions.
 """
 
-from os import environ
+from Stuffs import Vars
 
 
 def unset(arguments):
@@ -14,6 +14,6 @@ def unset(arguments):
     if not arguments:
         return 0, 0
     for element in arguments:
-        if element in environ:
-            environ.pop(element)
+        if element in Vars.variations:
+            Vars.variations.pop(element)
     return 0, 0

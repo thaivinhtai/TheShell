@@ -1,18 +1,19 @@
 """This module provides resources of variations for all program."""
 
 from string import ascii_lowercase, ascii_uppercase
-from os import getpid
+from os import getpid, environ
 
 
 class Vars():
     """This class stores vars for the The Shell.
     """
-    variations = {
+    special_vars = {
         "?": "0",
         "$": str(getpid()),
-        "a": "hello",
         "_": ""
     }
+    variations = dict(environ)
+    variations.update(special_vars)
 
     def get_var(key):
         """

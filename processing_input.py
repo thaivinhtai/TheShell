@@ -1,7 +1,8 @@
 """This module handle user's input."""
 
 from Stuffs import GlobalAliases
-from Features import expan_globbing_pattern, expan_parameter, expan_tilde
+from Features import (expan_globbing_pattern, expan_parameter, expan_tilde,
+                      assign_paramenter)
 
 
 def handle_input(orchestra):
@@ -16,10 +17,14 @@ def handle_input(orchestra):
     orchestra = orchestra.split(" ")
     while "" in orchestra:
         orchestra.remove("")
+    orchestra = assign_paramenter(orchestra)
     orchestra = expan_parameter(orchestra)
     orchestra = expan_globbing_pattern(orchestra)
     orchestra = expan_tilde(orchestra)
-    command = orchestra[0]
+    try:
+        command = orchestra[0]
+    except IndexError:
+        return "", ""
     arguments = orchestra[1:]
     # check command alias
     temp_command = []
